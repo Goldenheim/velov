@@ -1,0 +1,444 @@
+/* GENERAL STYLE */
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-family: 'open sans', sans-serif;
+}
+
+.modal {
+	text-align: center !important;
+}
+
+/* HEADER STYLE */
+
+header {
+	background-color: #F4F4F4;
+	height: 100px;
+	margin: auto;
+}
+
+#container,
+#logo {
+	display: flex;
+}
+
+#container {
+	width: 80%;
+	flex-direction: row;
+	margin: auto;
+	height: 100%;
+}
+
+#logo {
+	width: 50%;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+#logo img {
+	padding-right: 1em;
+	height: 7em;
+}
+
+#logo p {
+	margin: 0;
+	padding-top: 1.5em;
+	font-size: .9em;
+	font-weight: bold;
+}
+
+
+/* SLIDE SECTION */
+
+#slideShow {
+	position: relative;
+	height: 600px;
+}
+
+figure {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+}
+
+figcaption {
+	position: absolute;
+	bottom: 15%;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	width: 75%;
+	text-align: left;
+	padding: 1em;
+	left: 25%;
+}
+
+.items img {
+	width: 100%;
+}
+
+
+/* SLIDER BUTTONS STYLE */
+
+#controls i {
+	position: absolute;
+	font-size: 30px;
+	color: white;
+	cursor: pointer;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: .33s;
+	transition-duration: .33s;
+	transition: transform .33s;
+}
+
+.next i,
+.prev i {
+	top: 45%;
+}
+
+#controls i:hover {
+	color: #FF0000;
+	transform: scale(1.4);
+}
+
+.next i {
+	right: 1%;
+}
+
+.prev i {
+	left: 1%;
+}
+
+.stop i {
+	bottom: 2%;
+	right: 1%;
+}
+
+.fa-play {
+	display: none;
+}
+
+
+/* MAP SECTION */
+
+h1 {
+	text-transform: uppercase;
+	font-size: 2.2em;
+	text-align: center;
+	color: #FF0000;
+	flex: 3;
+}
+
+#sectionTitle {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+
+.lineBreaker {
+	height: 30px;
+	background-color: #FF0000;
+	width: 100%;
+	flex: 1;
+}
+
+h2,
+h3 {
+	text-transform: uppercase;
+	font-size: 1.3em;
+	text-align: center;
+}
+
+#mapSection {
+	margin: 0 5% 0 5%;
+}
+
+#map_container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	background-color: #F4F4F4;
+	border-radius: 20px 0 20px 0;
+	overflow: hidden;
+}
+
+#map {
+	width: 70%;
+	height: 600px;
+}
+
+#reservation_btn {
+	display: none;
+	text-align: center;
+	cursor: pointer;
+}
+
+#current_booking,
+#reservation_btn,
+#reservation_Sign button {
+	background-color: #FF0000;
+	color: white;
+	padding: 5%;
+	text-decoration: none;
+	border-radius: 5px;
+	transition: all .2s ease-in-out;
+}
+
+#stopResa {
+	background-color: #FF0000;
+	color: white;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+#current_booking {
+	position: relative;
+	display: none;
+	padding: 5px 10px 5px 10px !important;
+}
+
+#reservation_Sign button {
+	padding: 1%;
+	width: 20%;
+}
+
+#current_booking:hover,
+#reservation_btn:hover {
+	transform: scale(1.1);
+	background-color: white;
+	color: #FF0000;
+	border: 2px #FF0000 solid;
+}
+
+aside {
+	position: relative;
+	width: 30%;
+	height: auto;
+	text-align: center;
+}
+
+aside p {
+	padding: 0 10% 0 10%;
+}
+
+.fa-clock,
+.fa-map-marked-alt {
+	color: #FF0000;
+}
+
+#no_Bikes {
+	display: none;
+	padding-top: 10%;
+	color: red;
+	border-top: red 1px solid;
+}
+
+#statStation,
+#nameStation {
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	font-size: 2em;
+	color: black;
+}
+
+#station__selected {
+	display: none;
+}
+
+/* FORM CONTAINER */
+
+#reservation_Sign {
+	color: grey;
+	width: 100%;
+	padding: 2em;
+	background: #fff;
+	border: 1px solid #a0a0a0;
+	text-align: center;
+	display: none;
+	z-index: 10;
+}
+
+#reservation_Sign h2 {
+	color: black;
+	font-weight: bold;
+	font-size: 2.3em;
+	line-height: 0px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#btns_Panel {
+	display: flex;
+	justify-content: center;
+}
+
+#validation {
+	background-color: green !important;
+	display: none;
+}
+
+#canvas {
+	/* canvas bordure */
+	border: 1px grey solid;
+}
+
+
+/* FOOTER STYLE */
+
+footer {
+	background-image: url('../images/Footer-bg.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 300px;
+}
+
+.reservation {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+#booking_state {
+	width: 90%;
+	padding-top: 50px;
+	margin: auto;
+}
+
+#contact__Container {
+	text-align: center;
+	font-size: 0.8em;
+	color: grey;
+}
+
+/* MEDIA QUERIES */
+
+@media all and (max-width: 1024px) {
+	#logo {
+		width: 80%;
+	}
+	#slideShow {
+		height: 380px;
+	}
+	figcaption {
+		padding: 1em;
+	}
+	#statStation,
+	#nameStation {
+		font-size: 1.3em;
+	}
+	canvas {
+		touch-action: none;
+	}
+}
+
+@media all and (max-width: 480px) {
+	* {
+		padding: 0;
+	}
+	/* header */
+	header {
+		height: 100%;
+	}
+	#container {
+		width: 100%;
+		flex-direction: column;
+	}
+	#logo {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	#logo img {
+		padding-right: 0;
+		height: 5em;
+	}
+	#logo p {
+		padding-top: 0;
+		font-size: .9em;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 1%;
+	}
+	/* slider */
+	#controls {
+		display: none;
+	}
+	#slideShow {
+		width: auto;
+		height: auto;
+	}
+	#slide {
+		height: 200px;
+	}
+	figcaption {
+		bottom: 5%;
+		left: 3%;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.8);
+		color: white;
+		width: 90%;
+		text-align: center;
+		padding: 2%;
+	}
+	/* MAP SECTION */
+	#mapSection {
+		margin: 0;
+	}
+	#sectionTitle {
+		display: block;
+	}
+	.lineBreaker {
+		height: 10px;
+		width: auto;
+	}
+	h1 {
+		font-size: 1em;
+	}
+	#map_container {
+		flex-direction: column;
+		border-radius: 0;
+	}
+	#map {
+		width: 100%;
+	}
+	aside {
+		margin: 1%;
+		width: 100%;
+		padding: 0 0 2% 0;
+	}
+	.no_Bikes {
+		padding: 1%;
+		border: none;
+	}
+	/* RESERVATION */
+	#reservation_Sign {
+		padding: 2% 0 2% 0;
+	}
+	/* FOOTER */
+	#contact__Container {
+		padding: 0 2em 0 2em;
+	}
+	form {
+		flex-direction: column;
+		align-items: center;
+	}
+	.status_reservation {
+		text-align: center;
+	}
+}

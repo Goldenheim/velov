@@ -1,0 +1,13 @@
+/* GENERAL STYLE */
+
+body {
+	margin: 0 10% 0 10%;
+	overflow-x: hidden;
+	font-family: 'open sans', sans-serif;
+	text-align: justify;
+}
+
+h1 {
+	font-size: 4em;
+	text-align: center;
+}
